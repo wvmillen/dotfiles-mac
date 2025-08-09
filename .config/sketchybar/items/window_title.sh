@@ -9,7 +9,7 @@ label.font="$FONT:Semibold:15.0"         \
 
 sketchybar --set window_title \
   background.drawing=on \
-  background.color=0xb0282828 \
+  background.color=0x50282828 \
   background.border_color=0x701E1E1E \
   background.border_width=1 \
   background.corner_radius=12 \
@@ -22,5 +22,5 @@ sketchybar --set window_title \
   label.padding_left=8 \
   label.padding_right=8 \
   label.font="$FONT:Bold:15.0" \
-  label.color=0xffcc241d
+  label.color=0xffebdbb2x
 

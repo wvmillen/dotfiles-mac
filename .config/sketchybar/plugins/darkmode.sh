@@ -4,9 +4,9 @@ source $HOME/.config/sketchybar/icons.sh
 
 if [[ $(defaults read -g AppleInterfaceStyle 2>/dev/null) == "Dark" ]]
 then
-    sketchybar -m --set appearance icon="$SUN_ICN" icon.color=0xffd79921
+    sketchybar -m --set appearance icon="$SUN_ICN" icon.color=0xfffabd2f
 
 else
-    sketchybar -m --set appearance icon="$MOON_ICN" icon.color=0xffebdbb2
+    sketchybar -m --set appearance icon="$MOON_ICN" icon.color=0xff23296c
 fi
 

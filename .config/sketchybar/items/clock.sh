@@ -4,7 +4,7 @@ script="$PLUGIN_DIR/clock.sh"   \
 
 sketchybar --set clock \
   background.drawing=on \
-  background.color=0xb0282828 \
+  background.color=0x50282828 \
   background.border_color=0x701E1E1E \
   background.border_width=1 \
   background.corner_radius=12 \
@@ -16,4 +16,4 @@ sketchybar --set clock \
   blur_radius=20 \
   label.padding_left=0 \
   label.padding_right=12 \
-  label.color=0xff458588
+  label.color=0xffebdbb2

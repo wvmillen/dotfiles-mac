@@ -20,7 +20,7 @@ sketchybar --add item           wifi.control right                      \
 
 sketchybar --set wifi.control \
   background.drawing=on \
-  background.color=0xb0282828 \
+  background.color=0x50282828 \
   background.border_color=0x701E1E1E \
   background.border_width=1 \
   background.corner_radius=12 \
@@ -30,4 +30,4 @@ sketchybar --set wifi.control \
   padding_left=6 \
   padding_right=6 \
   blur_radius=20 \
-  icon.color=0xffb16286
+  icon.color=0xffebdbb2

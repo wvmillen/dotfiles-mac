@@ -5,7 +5,7 @@ sketchybar --add item battery right                      \
 
 sketchybar --set battery \
   background.drawing=on \
-  background.color=0xb01E1E1E \
+  background.color=0x50282828 \
   background.border_color=0x701E1E1E \
   background.border_width=1 \
   background.corner_radius=12 \
@@ -15,5 +15,5 @@ sketchybar --set battery \
   padding_left=6 \
   padding_right=6 \
   blur_radius=20 \
-  icon.color=0xffd65d0e \
-  label.color=0xffd65d0e
+  icon.color=0xffebdbb2 \
+  label.color=0xffebdbb2

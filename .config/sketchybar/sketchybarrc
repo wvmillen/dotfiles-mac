@@ -4,7 +4,7 @@ ITEM_DIR="$HOME/.config/sketchybar/items"
 source $HOME/.config/sketchybar/colors.sh
 source $HOME/.config/sketchybar/icons.sh
 
-export FONT="Lora"
+export FONT="Figtree"
 export NERD_FONT="SFMono Nerd Font"
 
 sketchybar --bar height=30        \

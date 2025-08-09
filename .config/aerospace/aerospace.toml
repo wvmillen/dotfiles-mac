@@ -175,7 +175,7 @@ alt-shift-enter = 'mode apps'
 alt-q = 'exec-and-forget open -na "kitty"'
 alt-b = 'exec-and-forget open -na "Brave Browser"'
 alt-c = 'exec-and-forget open -na "Visual Studio Code"'
-
+alt-n = 'exec-and-forget /opt/homebrew/bin/kitty --single-instance --directory /Users/wvmillen bash -lc "tmux has-session -t dev 2>/dev/null || tmux new-session -d -s dev -c \"$HOME\"; tmux new-window -t dev -n nvim -c \"$HOME\" nvim; tmux select-window -t dev:nvim; tmux attach -t dev"'
 
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes

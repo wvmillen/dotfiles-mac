@@ -1,18 +1,9 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
-# Wifi module breaks pretty much every macOS update, so let's settle with IP Address
-# macOS 14 Sonoma: https://github.com/FelixKratz/SketchyBar/issues/407
-# macOS 15 Sequoia: https://github.com/FelixKratz/SketchyBar/issues/517
-#INFO="$(networksetup -listallhardwareports | awk '/Wi-Fi/{getline; print $2}' | xargs networksetup -getairportnetwork | sed "s/Current Wi-Fi Network: //")"
-#
-#if [ "$SENDER" = "wifi_change" ]; then
-#  WIFI=${INFO:-"Not Connected"}
-#  sketchybar --set $NAME label="${WIFI}"
-#fi
+CURRENT_WIFI="$(/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I)"
+SSID="$(echo "$CURRENT_WIFI" | grep -o "SSID: .*" | sed 's/^SSID: //')"
+CURR_TX="$(echo "$CURRENT_WIFI" | grep -o "lastTxRate: .*" | sed 's/^lastTxRate: //')"
 
-INFO="$(scutil --nwi | grep address | sed 's/.*://' | tr -d ' ' | head -1)"
+POPUP_OFF="sketchybar --set wifi.control popup.drawing=off"
+POPUP_CLICK_SCRIPT="sketchybar --set \$NAME popup.drawing=toggle"
 
-if [ "$SENDER" = "wifi_change" ]; then
-  WIFI=${INFO:-"Not Connected"}
-  sketchybar --set $NAME label="${WIFI}"
-fi

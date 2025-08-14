@@ -1,6 +1,7 @@
 # This is my macOS customization
 
 This uses the window manager [Aerospace](https://github.com/nikitabobko/AeroSpace) and [SketchyBar](https://github.com/FelixKratz/SketchyBar)
+SF Pro is the icon font
 
 ## NeoVim
 

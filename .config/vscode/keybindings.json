@@ -1,0 +1,115 @@
+// Place your key bindings in this file to override the defaults
+[
+  // NAVIGATION - Only active in text editors with vim normal mode
+  {
+    "key": "space t",
+    "command": "workbench.action.togglePanel",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "key": "space q",
+    "command": "workbench.action.terminal.new",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "key": "space w d",
+    "command": "workbench.action.closeActiveEditor",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "key": "shift+d",
+    "command": "workbench.action.closeActiveEditor",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "space -",
+    "command": "workbench.action.splitEditorDown",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "key": "space |",
+    "command": "workbench.action.splitEditor",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "key": "space x q",
+    "command": "editor.action.quickFix",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "key": "space g h",
+    "command": "editor.action.showDefinitionPreviewHover",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "key": "shift+r", 
+    "command": "workbench.action.terminal.rename",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "space f f",
+    "command": "workbench.action.quickOpen",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "key": "space s s", 
+    "command": "workbench.action.findInFiles",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+w",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "shift+h",
+    "command": "workbench.action.previousEditorInGroup",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "shift+l", 
+    "command": "workbench.action.nextEditorInGroup",
+    "when": "terminalFocus"
+  },
+  // FILE TREE
+  {
+    "command": "workbench.action.toggleSidebarVisibility",
+    "key": "; e",
+    "when": "vim.mode == 'Normal'"
+  },
+  {
+    "command": "workbench.files.action.focusFilesExplorer",
+    "key": "; e",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  {
+    "key": "a",
+    "command": "explorer.newFile",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "command": "renameFile",
+    "key": "r",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "shift+n",
+    "command": "explorer.newFolder",
+    "when": "explorerViewletFocus"
+  },
+  {
+    "key": "space w n",
+    "command": "workbench.action.newWindow",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "command": "deleteFile",
+    "key": "d",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "space z",
+    "command": "workbench.action.toggleZenMode",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  }
+]

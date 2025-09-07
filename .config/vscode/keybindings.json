@@ -1,65 +1,81 @@
-// Place your key bindings in this file to override the defaults
 [
-  // NAVIGATION - Only active in text editors with vim normal mode
   {
-    "key": "space t",
+    "key": "ctrl+t",
     "command": "workbench.action.togglePanel",
-    "when": "vim.mode == 'Normal' && editorTextFocus"
+    "when": "vim.mode == 'Normal'"
   },
   {
-    "key": "space q",
+    "key": "ctrl+q",
     "command": "workbench.action.terminal.new",
     "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   {
-    "key": "space w d",
+    "key": "ctrl+d",
     "command": "workbench.action.closeActiveEditor",
     "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   {
-    "key": "shift+d",
-    "command": "workbench.action.closeActiveEditor",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "space -",
+    "key": "ctrl+-",
     "command": "workbench.action.splitEditorDown",
     "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   {
-    "key": "space |",
+    "key": "ctrl+shift+\\",
     "command": "workbench.action.splitEditor",
     "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   {
-    "key": "space x q",
+    "key": "ctrl+p",
     "command": "editor.action.quickFix",
     "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   {
-    "key": "space g h",
+    "key": "ctrl+g h",
     "command": "editor.action.showDefinitionPreviewHover",
     "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   {
-    "key": "shift+r", 
+    "key": "ctrl+shift+r", 
     "command": "workbench.action.terminal.rename",
     "when": "terminalFocus"
   },
   {
-    "key": "space f f",
+    "key": "ctrl+f f",
     "command": "workbench.action.quickOpen",
-    "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   {
-    "key": "space s s", 
+    "key": "ctrl+f s", 
     "command": "workbench.action.findInFiles",
-    "when": "vim.mode == 'Normal' && editorTextFocus"
   },
+{
+  "key": "escape",
+  "command": "workbench.action.focusActiveEditorGroup", 
+  "when": "searchViewletFocus"
+},
+{
+  "key": "escape",
+  "command": "workbench.action.closeSidebar",
+  "when": "searchViewletFocus"
+},
   {
     "key": "ctrl+shift+w",
     "command": "workbench.action.terminal.kill",
     "when": "terminalFocus"
+  },
+{
+    "key": "ctrl+shift+w", 
+    "command": "workbench.action.closeActiveEditor",
+    "when": "terminalEditorFocus"
+  },
+  {
+    "key": "ctrl+shift+w",
+    "command": "workbench.action.closeActiveEditor",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+w",
+    "command": "workbench.action.closeActiveEditor",
+    "when": "!terminalFocus && !filesExplorerFocus"
   },
   {
     "key": "shift+h",
@@ -71,17 +87,22 @@
     "command": "workbench.action.nextEditorInGroup",
     "when": "terminalFocus"
   },
-  // FILE TREE
-  {
-    "command": "workbench.action.toggleSidebarVisibility",
-    "key": "; e",
-    "when": "vim.mode == 'Normal'"
-  },
-  {
-    "command": "workbench.files.action.focusFilesExplorer",
-    "key": "; e",
-    "when": "editorTextFocus && vim.mode == 'Normal'"
-  },
+  // FILE TREE - Removed restrictive "when" conditions
+{
+  "command": "workbench.action.toggleSidebarVisibility",
+  "key": "ctrl+e",
+  "when": "filesExplorerFocus"
+},
+{
+  "command": "workbench.files.action.focusFilesExplorer",
+  "key": "ctrl+e",
+  "when": "!filesExplorerFocus && !sideBarVisible"
+},
+{
+  "command": "workbench.action.toggleSidebarVisibility",
+  "key": "ctrl+e",
+  "when": "!filesExplorerFocus && sideBarVisible"
+},
   {
     "key": "a",
     "command": "explorer.newFile",
@@ -93,14 +114,13 @@
     "when": "filesExplorerFocus && !inputFocus"
   },
   {
-    "key": "shift+n",
+    "key": "n",
     "command": "explorer.newFolder",
-    "when": "explorerViewletFocus"
+    "when": "explorerViewletFocus && !inputFocus"
   },
   {
-    "key": "space w n",
+    "key": "ctrl+n",
     "command": "workbench.action.newWindow",
-    "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   {
     "command": "deleteFile",
@@ -108,7 +128,7 @@
     "when": "filesExplorerFocus && !inputFocus"
   },
   {
-    "key": "space z",
+    "key": "ctrl+shift+z",
     "command": "workbench.action.toggleZenMode",
     "when": "vim.mode == 'Normal' && editorTextFocus"
   }

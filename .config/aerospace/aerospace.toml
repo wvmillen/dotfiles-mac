@@ -1,9 +1,10 @@
-after-startup-command = ['exec-and-forget sketchybar',   'exec-and-forget borders active_color=0xfffbf1c7 inactive_color=0xffd5c4a1 width=4'
-]
+# after-startup-command = ['exec-and-forget sketchybar']
+
+# 'exec-and-forget borders active_color=0xfffbf1c7 inactive_color=0xffd5c4a1 width=4'
 
 # Notify Sketchybar about workspace change
-exec-on-workspace-change = ['/bin/bash', '-c',
-  'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE']
+# exec-on-workspace-change = ['/bin/bash', '-c',
+#   'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE']
 
 # Start AeroSpace at login
 start-at-login = true
@@ -50,7 +51,7 @@ automatically-unhide-macos-hidden-apps = true
 if.app-name-regex-substring = 'finder'
 run = 'layout floating'
 
- 
+
 [[on-window-detected]]
 if.app-name-regex-substring = 'camera'
 run = 'layout floating'
@@ -77,11 +78,11 @@ preset = 'qwerty'
 #                 See: https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
 inner.horizontal = 15
-inner.vertical =   15
-outer.left =       15
-outer.bottom =     15
-outer.top =        10
-outer.right =      15
+inner.vertical = 15
+outer.left = 15
+outer.bottom = 15
+outer.top = 10
+outer.right = 15
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -114,7 +115,7 @@ outer.right =      15
 # '''
 
 alt-ctrl-shift-f = 'fullscreen'
-alt-ctrl-f = 'layout floating tiling'
+alt-v = 'layout floating tiling'
 
 alt-shift-left = 'join-with left'
 alt-shift-down = 'join-with down'
@@ -181,6 +182,5 @@ alt-n = 'exec-and-forget /opt/homebrew/bin/kitty --single-instance --directory /
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 [mode.service.binding]
 esc = ['reload-config', 'mode main']
-r = ['flatten-workspace-tree', 'mode main'] # reset layout
-alt-v = ['layout floating tiling', 'mode main'] # Toggle between floating and tiling layout
+r = ['flatten-workspace-tree', 'mode main']                # reset layout
 backspace = ['close-all-windows-but-current', 'mode main']

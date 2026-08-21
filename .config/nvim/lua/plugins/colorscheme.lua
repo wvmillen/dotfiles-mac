@@ -1,4 +1,4 @@
-local default = "kanagawa-dragon" -- <<–– change me whenever you want >>
+local default = "everforest" -- <<–– change me whenever you want >>
 
 local function is_default(name)
   return default == name
@@ -36,7 +36,8 @@ return {
       if not is_default("everforest") then
         return
       end
-      vim.g.everforest_background = "dark"
+      vim.opt.background = "light" -- "light" | "dark"
+      vim.g.everforest_background = "soft" -- "soft" | "medium" | "hard"
       vim.g.everforest_better_performance = 1
       vim.cmd.colorscheme("everforest")
     end,
@@ -56,13 +57,11 @@ return {
     "rebelot/kanagawa.nvim",
     lazy = not is_default("kanagawa"),
     priority = is_default("kanagawa") and 1000 or nil,
-    opts = is_default("kanagawa")
-        and {
-          theme = "wave", -- "wave" | "dragon" | "lotus"
-          dimInactive = true,
-          terminalColors = true,
-        }
-      or nil,
+    opts = is_default("kanagawa") and {
+      theme = "wave", -- "wave" | "dragon" | "lotus"
+      dimInactive = true,
+      terminalColors = true,
+    } or nil,
   },
 
   {

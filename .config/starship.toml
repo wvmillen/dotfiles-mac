@@ -1,0 +1,33 @@
+"$schema" = "https://starship.rs/config-schema.json"
+
+add_newline = false
+
+# Compact Powerline prompt: directory, Git context, then the input marker.
+format = """
+[](#0088ff)\
+$directory\
+[](fg:#0088ff bg:#3ad900)\
+$git_branch\
+$git_status\
+[](fg:#3ad900) \
+$character"""
+
+[directory]
+style = "bold fg:#ffffff bg:#0088ff"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[git_branch]
+symbol = " "
+style = "bold fg:#193549 bg:#3ad900"
+format = "[ $symbol$branch ]($style)"
+
+[git_status]
+style = "bold fg:#193549 bg:#3ad900"
+format = "[$all_status$ahead_behind ]($style)"
+
+[character]
+success_symbol = "[❯](bold #0088ff)"
+error_symbol = "[❯](bold #ff628c)"
+vimcmd_symbol = "[❮](bold #3ad900)"

@@ -1,3 +1,10 @@
-theme = Cobalt Next
+theme = Chester
 font-family = Liga SFMono Nerd Font
 font-size = 14
+
+# 1.0 is opaque; lower values are increasingly transparent.
+background-opacity = 0.80
+# Apply transparency to explicit cell backgrounds from Neovim and tmux.
+background-opacity-cells = true
+# Blur the content visible behind the terminal on macOS.
+background-blur = 20

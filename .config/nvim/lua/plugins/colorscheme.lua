@@ -1,4 +1,4 @@
-local default = "everforest" -- <<–– change me whenever you want >>
+local default = "chstr" -- <<–– change me whenever you want >>
 
 local function is_default(name)
   return default == name
@@ -37,7 +37,7 @@ return {
         return
       end
       vim.opt.background = "light" -- "light" | "dark"
-      vim.g.everforest_background = "soft" -- "soft" | "medium" | "hard"
+      vim.g.everforest_background = "medium" -- "soft" | "medium" | "hard"
       vim.g.everforest_better_performance = 1
       vim.cmd.colorscheme("everforest")
     end,
@@ -71,6 +71,13 @@ return {
     opts = is_default("bamboo") and {
       style = "multiplex",
     } or nil,
+  },
+
+  {
+    "asperan/chstr.nvim",
+    lazy = not is_default("chstr"),
+    priority = is_default("chstr") and 1000 or nil,
+    dependencies = "rktjmp/lush.nvim",
   },
 
   {

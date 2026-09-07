@@ -1,7 +1,7 @@
 # vim:fileencoding=utf-8:foldmethod=marker
 
 # BEGIN_KITTY_THEME
-# Gruvbox Material Light Soft
+# Gruvbox Dark Soft
 include current-theme.conf
 # END_KITTY_THEME
 #
@@ -10,6 +10,9 @@ bold_font auto
 italic_font auto
 bold_italic_font auto
 font_size 14
+active_border_color   #fbf1c7
+inactive_border_color #d5c4a1
+
 #: Fonts {{{
 
 #: kitty has very powerful font management. You can configure

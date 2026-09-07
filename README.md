@@ -28,20 +28,36 @@ SF Mono Nerd Font for Powerline symbols and icons.
    ```
 
 4. Link the tracked configuration files into your home directory. Back up any
-   existing files first:
+   existing files first. The VS Code links use its macOS-specific settings
+   directory:
 
    ```sh
    mkdir -p ~/.config
+   mkdir -p "$HOME/Library/Application Support/Code/User"
    ln -s ~/dotfiles-mac/.zshrc ~/.zshrc
+   ln -s ~/dotfiles-mac/.zprofile ~/.zprofile
    ln -s ~/dotfiles-mac/.tmux.conf ~/.tmux.conf
    ln -s ~/dotfiles-mac/.config/aerospace ~/.config/aerospace
+   ln -s ~/dotfiles-mac/.config/btop ~/.config/btop
    ln -s ~/dotfiles-mac/.config/ghostty ~/.config/ghostty
+   ln -s ~/dotfiles-mac/.config/kitty ~/.config/kitty
    ln -s ~/dotfiles-mac/.config/nvim ~/.config/nvim
    ln -s ~/dotfiles-mac/.config/sketchybar ~/.config/sketchybar
    ln -s ~/dotfiles-mac/.config/starship.toml ~/.config/starship.toml
+   ln -s ~/dotfiles-mac/.config/vscode/settings.json \
+     "$HOME/Library/Application Support/Code/User/settings.json"
+   ln -s ~/dotfiles-mac/.config/vscode/keybindings.json \
+     "$HOME/Library/Application Support/Code/User/keybindings.json"
    ```
 
-5. Start a fresh shell and then open Neovim. LazyVim will install its plugins:
+5. Install the tracked VS Code extensions:
+
+   ```sh
+   xargs -n 1 code --install-extension \
+     < ~/dotfiles-mac/.config/vscode/extensions.txt
+   ```
+
+6. Start a fresh shell and then open Neovim. LazyVim will install its plugins:
 
    ```sh
    exec zsh
@@ -53,6 +69,10 @@ SF Mono Nerd Font for Powerline symbols and icons.
 
 The `Brewfile` is the source of truth for machine dependencies. Re-run
 `brew bundle --file ~/dotfiles-mac/Brewfile` whenever it changes.
+
+SSH private keys and Git identity are intentionally not stored here. Generate
+or securely transfer an SSH key, add it to GitHub, and configure `user.name`
+and `user.email` before making commits on a new Mac.
 
 ## NeoVim
 
